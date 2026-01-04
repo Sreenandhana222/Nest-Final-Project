@@ -1,0 +1,6 @@
+/* Ensure sticky navbar stays on top of other content */
+.sticky-top {
+    z-index: 1030;
+    /* Bootstrap's default is 1020, going slightly higher just in case */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

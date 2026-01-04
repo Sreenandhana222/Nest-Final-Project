@@ -1,0 +1,30 @@
+<div class="container mt-5" *ngIf="product">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm border-0">
+                <img [src]="product.thumbnail" class="card-img-top p-3 bg-light" [alt]="product.title"
+                    style="max-height: 400px; object-fit: contain;">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h1 class="display-5 fw-bold text-dark mb-3">{{product.title}}</h1>
+            <div class="mb-3">
+                <span class="badge bg-warning text-dark me-2">★ {{product.rating}}</span>
+                <span class="text-muted">{{product.category}}</span>
+            </div>
+            <h2 class="text-primary mb-4">${{product.price}}</h2>
+            <p class="lead text-muted mb-4">{{product.description}}</p>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button class="btn btn-outline-primary btn-lg px-4 me-md-2" type="button">Add to Cart</button>
+                <button class="btn btn-primary btn-lg px-4" type="button">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5 text-center" *ngIf="!product">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>

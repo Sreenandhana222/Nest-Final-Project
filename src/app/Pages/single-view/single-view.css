@@ -1,0 +1,8 @@
+/* Custom styles to augment Bootstrap */
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.02);
+}
